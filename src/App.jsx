@@ -9,11 +9,12 @@ import Login from './pages/Login';
 import NotFound from './pages/NotFound';
 import { Container, Typography, Button, AppBar, Toolbar, IconButton, Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import "./App.css"
 
 function App() {
   return (
     <Router>
-      <AppBar position="static">
+      <AppBar position="static" style={{background:"black"}} >
         <Toolbar>
           <IconButton edge="start" color="inherit" aria-label="menu">
             <MenuIcon />
