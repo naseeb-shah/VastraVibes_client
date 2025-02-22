@@ -1,16 +1,23 @@
 import React from "react";
-import { Typography, Box, Container, Button, Grid, Card, CardContent, TextField } from "@mui/material";
+import { Typography, Box, Container, Button,CardContent, TextField ,Grid, Card, CardMedia,IconButton } from "@mui/material";
+import { Facebook, Twitter, YouTube, Instagram } from "@mui/icons-material";
 import ImageSlider from "./ImageSlider";
-import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
 
 function Home() {
+  const images = [
+    "https://askproject.net/fashia/wp-content/uploads/sites/151/2023/08/elegant-lady-in-fashionable-slim-fit-black-bodysui-XC9QX7F.jpg",
+    "https://askproject.net/fashia/wp-content/uploads/sites/151/2023/08/clothes-on-a-hanger-in-a-boutique-C9FHS4C.jpg",
+    "https://askproject.net/fashia/wp-content/uploads/sites/151/2023/08/dark-skinned-and-short-haired-women-in-stylish-sum-XXN2AJA.jpg",
+    "https://askproject.net/fashia/wp-content/uploads/sites/151/2023/08/young-woman-with-fashion-magazine-NLSWZMX.jpg",
+    "https://askproject.net/fashia/wp-content/uploads/sites/151/2023/08/rack-of-clothes-in-a-boutique-NGD45UR.jpg",
+  ];
   return (
     <Container maxWidth="xl" disableGutters>
       
-      {/* Hero Section */}
+      
       <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", bgcolor: "white", boxShadow: "2px 2px 10px rgba(0, 0, 0, 0.2)", borderRadius: "8px", p: 4}}>
         <Box sx={{ flex: 1 }}>
           <ImageSlider />
@@ -89,7 +96,7 @@ function Home() {
         </Grid>
       </Box>
 
-      {/* Contact Section */}
+     
       <Box sx={{ py: 8, bgcolor: "#f5f5f5" }}>
         <Container maxWidth="lg">
           <Grid container spacing={4} alignItems="center">
@@ -138,6 +145,114 @@ function Home() {
           </Grid>
         </Container>
       </Box>
+      <Box sx={{ textAlign: "center", py: 5 }}>
+      <Typography variant="h5" sx={{ fontWeight: "bold", mb: 3 }}>
+        Follow us on Instagram
+      </Typography>
+      
+      <Grid container spacing={2} justifyContent="center">
+        {images.map((img, index) => (
+          <Grid item xs={12} sm={6} md={4} lg={2.4} key={index}>
+            <Card sx={{ height: 280, overflow: "hidden", borderRadius: 2 }}>
+              <CardMedia component="img" image={img} sx={{ height: "100%", objectFit: "cover" }} />
+            </Card>
+          </Grid>
+        ))}
+      </Grid>
+
+      <Button
+        variant="contained"
+        sx={{
+          mt: 4,
+          backgroundColor: "black",
+          color: "white",
+          px: 4,
+          py: 1,
+          "&:hover": { backgroundColor: "gray" },
+        }}
+      >
+        FOLLOW US
+      </Button>
+    </Box>
+    <Box sx={{ bgcolor: "black", color: "white", py: 4}}>
+  
+      <Box textAlign="center" mb={3} px={3}>
+        <Typography variant="h4" sx={{ fontFamily: "serif", fontWeight: "bold" }}>
+          FASHIA
+        </Typography>
+        <Typography variant="body1">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus.
+        </Typography>
+      </Box>
+
+      <Box sx={{ borderBottom: "1px solid gray", my: 3, mx: 3 }} />
+
+     
+      <Grid container spacing={4} px={{ xs: 2, sm: 4, md: 8 }}>
+        <Grid item xs={12} md={4}>
+          <Typography variant="h6">Address</Typography>
+          <Typography variant="body2">
+            5116 Dietrich Mill, North Emmet <br />
+            Dakota USA 45862
+          </Typography>
+          <Box mt={2}>
+            <IconButton color="inherit">
+              <Facebook />
+            </IconButton>
+            <IconButton color="inherit">
+              <Twitter />
+            </IconButton>
+            <IconButton color="inherit">
+              <YouTube />
+            </IconButton>
+            <IconButton color="inherit">
+              <Instagram />
+            </IconButton>
+          </Box>
+        </Grid>
+
+        <Grid item xs={12} md={4}>
+          <Typography variant="h6">Contact</Typography>
+          <Typography variant="body2">
+            P: +1 (234) 567 890 <br />
+            +0 (987) 654 321
+          </Typography>
+          <Typography variant="body2">
+            E: fashia@mails.com <br />
+            example@mail.com
+          </Typography>
+        </Grid>
+
+        <Grid item xs={12} md={4}>
+          <Typography variant="h6">Let's Talk About Fashion</Typography>
+          <Typography variant="body2">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Mauris sit amet cursus orci.
+          </Typography>
+          <Box mt={2}>
+            <Button variant="contained" sx={{ bgcolor: "white", color: "black" }}>
+              APPOINTMENT
+            </Button>
+          </Box>
+        </Grid>
+      </Grid>
+
+      <Box sx={{ borderBottom: "1px solid gray", my: 3, mx: 3 }} />
+      <Box textAlign="center" px={3}>
+        <Typography variant="body2">
+          COPYRIGHT © 2023 ASK PROJECT
+        </Typography>
+        <Box mt={1} display="flex" justifyContent="center" gap={2}>
+          <Typography variant="body2" component="a" href="#" sx={{ textDecoration: "none", color: "white" }}>
+            PRIVACY POLICY
+          </Typography>
+          <Typography variant="body2" component="a" href="#" sx={{ textDecoration: "none", color: "white" }}>
+            TERMS & SERVICES
+          </Typography>
+        </Box>
+      </Box>
+    
+    </Box>
     </Container>
   );
 }
