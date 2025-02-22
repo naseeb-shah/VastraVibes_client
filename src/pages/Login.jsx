@@ -1,17 +1,17 @@
 import React from 'react';
 import { Typography, Box } from '@mui/material';
 
-function Signup() {
+function Login() {
   return (
     <Box>
       <Typography variant="h4" gutterBottom>
-        Signup page
+        Login page
       </Typography>
       <Typography variant="body1">
-        Welcome to the Signup  Page!
+        Welcome to the Login Page!
       </Typography>
     </Box>
   );
 }
 
-export default Signup;
+export default Login;
