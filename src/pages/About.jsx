@@ -1,5 +1,6 @@
+
 import React from "react";
-import { Container, Typography, Box, Grid, Card, CardContent } from "@mui/material";
+import { Container, Typography, Box, Grid, Card, CardContent,Button } from "@mui/material";
 import PeopleIcon from "@mui/icons-material/People";
 import DesignServicesIcon from "@mui/icons-material/DesignServices";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
@@ -74,8 +75,6 @@ const About = () => {
         </Grid>
       </Box>
     </Container>
-  );
-};
 
 const features = [
   {

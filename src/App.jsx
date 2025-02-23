@@ -12,12 +12,14 @@ import NotFound from './pages/NotFound';
 import Footer from './pages/Footer';  
 import { Container, Typography, Button, AppBar, Toolbar, IconButton, Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import { ToastContainer, toast } from 'react-toastify';
 import "./App.css";
 
 function App() {
   
   return (
     <Router>
+      <ToastContainer />
       <AppBar position="static" style={{ background: "black" }}>
         <Toolbar>
           <IconButton edge="start" color="inherit" aria-label="menu">
