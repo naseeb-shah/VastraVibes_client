@@ -1,11 +1,12 @@
 import React from "react";
 import { Grid, Card, CardMedia, CardContent, Typography } from "@mui/material";
+import { useNavigate } from "react-router-dom";
 
 const products = [
-  { id: 1, title: "Custom Suit", price: "$199", image: "https://img.freepik.com/free-photo/portrait-beautiful-woman-sewing-machine_1163-2036.jpg" },
-  { id: 2, title: "Handmade Watch", price: "$120", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNb0GyoFgqS1JaJ4SM4toESzcaYhCjTazVv-e1xvVStuHgqi9_Gs8z4NczoiJhCeirC7E&usqp=CAU" },
-  { id: 3, title: "Elegant Blazer", price: "$250", image: "https://thumbs.dreamstime.com/b/fashion-student-using-sewing-machine-college-49207529.jpg" },
-  { id: 4, title: "Premium Shirt", price: "$99", image: "https://i0.wp.com/www.assembleandearn.com/wp-content/uploads/2015/03/mens-tailoring.jpg?fit=600%2C400&ssl=1" },
+  { id: 1, title: "Custom Suit", price: "$199", image: "https://img.freepik.com/free-photo/portrait-beautiful-woman-sewing-machine_1163-2036.jpg", description: "Tailored to perfection with high-quality fabric." },
+  { id: 2, title: "Handmade Watch", price: "$120", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNb0GyoFgqS1JaJ4SM4toESzcaYhCjTazVv-e1xvVStuHgqi9_Gs8z4NczoiJhCeirC7E&usqp=CAU", description: "Elegant handmade watch with premium leather strap." },
+  { id: 3, title: "Elegant Blazer", price: "$250", image: "https://thumbs.dreamstime.com/b/fashion-student-using-sewing-machine-college-49207529.jpg", description: "Classy and comfortable blazer for every occasion." },
+  { id: 4, title: "Premium Shirt", price: "$99", image: "https://i0.wp.com/www.assembleandearn.com/wp-content/uploads/2015/03/mens-tailoring.jpg?fit=600%2C400&ssl=1", description: "High-quality fabric shirt with a modern fit." },
 ];
 
 const featured = [
@@ -16,20 +17,19 @@ const featured = [
 ];
 
 const TailorGrid = () => {
-    
-  return (
-    
+  const navigate = useNavigate();
 
+  return (
     <Grid container spacing={2} padding={2} marginTop={10}>
-        <Grid item xs={12}>
+      <Grid item xs={12}>
         <Typography variant="h4" textAlign="center" fontWeight="bold" marginBottom={3}>
           Book Your Tailors
         </Typography>
       </Grid>
-      {/* First Row */}
+      
       {products.map((product) => (
         <Grid item xs={12} sm={6} md={3} key={product.id}>
-          <Card>
+          <Card onClick={() => navigate(`/tailor/${product.id}`)} style={{ cursor: "pointer" }}>
             <CardMedia component="img" height="400" image={product.image} alt={product.title} />
             <CardContent>
               <Typography variant="h6">{product.title}</Typography>
@@ -39,10 +39,9 @@ const TailorGrid = () => {
         </Grid>
       ))}
 
-      {/* Second Row */}
       {featured.map((item) => (
         <Grid item xs={12} sm={6} md={3} key={item.id}>
-          <Card>
+          <Card onClick={() => navigate(`/tailor/${item.id}`)} style={{ cursor: "pointer" }}>
             <CardMedia component="img" height="400" image={item.image} alt={item.title} />
             <CardContent>
               <Typography variant="h6">{item.title}</Typography>
