@@ -65,7 +65,7 @@ import Contact from './pages/Contact';
 import Signup from './pages/Signup';
 import Login from './pages/Login';
 import NotFound from './pages/NotFound';
-import Footer from './pages/Footer';  // ✅ Corrected import
+import Footer from './pages/Footer';  
 import { Container, Typography, Button, AppBar, Toolbar, IconButton, Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import "./App.css";
@@ -78,9 +78,7 @@ function App() {
           <IconButton edge="start" color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" style={{ flexGrow: 1 }}>
-            Vastra
-          </Typography>
+          <Typography variant="h6" style={{ flexGrow: 1 }}>Vastra</Typography>
           <Button color="inherit" href="/">Home</Button>
           <Button color="inherit" href="/about">About</Button>
           <Button color="inherit" href="/services">Services</Button>
@@ -102,7 +100,7 @@ function App() {
           </Routes>
         </Box>
       </Container>
-      <Footer />  {/* ✅ Placed outside Container for better layout */}
+      <Footer /> 
     </Router>
   );
 }
