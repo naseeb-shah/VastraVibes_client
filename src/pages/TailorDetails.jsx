@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import { Container, Typography, Card, CardMedia, CardContent, Button, Rating, Box, TextField, Dialog, List, ListItem, ListItemText } from "@mui/material";
@@ -157,4 +155,3 @@ const TailorDetails = () => {
 };
 
 export default TailorDetails;
-
