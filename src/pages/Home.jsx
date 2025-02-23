@@ -5,6 +5,7 @@ import ImageSlider from "./ImageSlider";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
 import EmailIcon from "@mui/icons-material/Email";
+import TailorGrid from "./Product";
 
 function Home() {
   const images = [
@@ -15,13 +16,13 @@ function Home() {
     "https://askproject.net/fashia/wp-content/uploads/sites/151/2023/08/rack-of-clothes-in-a-boutique-NGD45UR.jpg",
   ];
   return (
-    <Container maxWidth="xl" disableGutters>
+    <Container disableGutters >
       
       
       <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", bgcolor: "white", boxShadow: "2px 2px 10px rgba(0, 0, 0, 0.2)", borderRadius: "8px", p: 4}}>
-        <Box sx={{ flex: 1 }}>
+        <Card sx={{ flex: 1,minHeight:"200"}}>
           <ImageSlider />
-        </Box>
+        </Card>
         <Box sx={{ flex: 1, textAlign: "left", p: 3 }}>
           <Typography variant="h4" fontWeight="bold" gutterBottom>
             Fashion Is the Armor to Survive the Reality of Everyday Life
@@ -39,6 +40,7 @@ function Home() {
           </Box>
         </Box>
       </Box>
+      <TailorGrid/>
 
   
       <Box sx={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%", bgcolor: "white", py: 6, mt: 5 , height:"50%"}}>
@@ -131,7 +133,7 @@ function Home() {
             <Grid item xs={12} md={6}>
               <Box sx={{ bgcolor: "black", color: "white", p: 4, borderRadius: 2, boxShadow: 3 }}>
                 <Typography variant="h5" fontWeight="bold" mb={3}>
-                  Get in Touch
+                  Register
                 </Typography>
                 <TextField fullWidth label="First Name" variant="outlined" sx={{ mb: 2, bgcolor: "white", borderRadius: 1 }} />
                 <TextField fullWidth label="Last Name" variant="outlined" sx={{ mb: 2, bgcolor: "white", borderRadius: 1 }} />
