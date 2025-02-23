@@ -117,7 +117,7 @@ const TailorDetails = () => {
                 </CardContent>
             </Card>
 
-            {/* Chat Box Dialog */}
+          
             <Dialog open={chatOpen} onClose={handleChatClose}>
                 <Box sx={{ width: 300, p: 2 }}>
                     <Typography variant="h6" textAlign="center">Live Chat</Typography>

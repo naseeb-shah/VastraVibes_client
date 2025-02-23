@@ -20,7 +20,7 @@ function Home() {
 
   return (
     <Container disableGutters>
-      {/* Hero Section */}
+    
       <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-between", bgcolor: "white", boxShadow: 2, borderRadius: 2, p: 4 }}>
         <Card sx={{ flex: 1, minHeight: "200px" }}>
           <ImageSlider />
@@ -47,10 +47,10 @@ function Home() {
         </Box>
       </Box>
 
-      {/* Products Section */}
+   
       <TailorGrid />
 
-      {/* Services Section */}
+
       <Box sx={{ textAlign: "center", py: 6, bgcolor: "#f9f9f9" }}>
         <Typography variant="h4" fontWeight="bold" gutterBottom>
           Our Services
@@ -79,7 +79,6 @@ function Home() {
         </Grid>
       </Box>
 
-      {/* Contact Section */}
       <Box sx={{ py: 8, bgcolor: "#f5f5f5" }}>
         <Container maxWidth="lg">
           <Grid container spacing={4} alignItems="center">
@@ -111,7 +110,7 @@ function Home() {
               </Box>
             </Grid>
 
-            {/* Registration Form */}
+       
             <Grid item xs={12} md={6}>
               <Box sx={{ bgcolor: "black", color: "white", p: 4, borderRadius: 2, boxShadow: 3 }}>
                 <Typography variant="h5" fontWeight="bold" mb={3}>
@@ -130,7 +129,7 @@ function Home() {
         </Container>
       </Box>
 
-      {/* Follow Us Section */}
+     
       <Box sx={{ textAlign: "center", py: 5 }}>
         <Typography variant="h5" sx={{ fontWeight: "bold", mb: 3 }}>
           Follow us on Instagram
