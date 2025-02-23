@@ -6,7 +6,6 @@ import DesignServicesIcon from "@mui/icons-material/DesignServices";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import { styled } from "@mui/system";
 
-// Image Hover Animation - Zoom Effect
 const AnimatedImage = styled("img")({
   width: "260px",
   height: "200px",
@@ -75,6 +74,7 @@ const About = () => {
         </Grid>
       </Box>
     </Container>
+)};
 
 const features = [
   {
