@@ -1,6 +1,5 @@
 import React from "react";
 import { Typography, Box, Container, Button,CardContent, TextField ,Grid, Card, CardMedia,IconButton } from "@mui/material";
-import { Facebook, Twitter, YouTube, Instagram } from "@mui/icons-material";
 import ImageSlider from "./ImageSlider";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import PhoneIcon from "@mui/icons-material/Phone";
@@ -175,85 +174,6 @@ function Home() {
       >
         FOLLOW US
       </Button>
-    </Box>
-    <Box sx={{ bgcolor: "black", color: "white", py: 4}}>
-  
-      <Box textAlign="center" mb={3} px={3}>
-        <Typography variant="h4" sx={{ fontFamily: "serif", fontWeight: "bold" }}>
-          FASHIA
-        </Typography>
-        <Typography variant="body1">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus.
-        </Typography>
-      </Box>
-
-      <Box sx={{ borderBottom: "1px solid gray", my: 3, mx: 3 }} />
-
-     
-      <Grid container spacing={4} px={{ xs: 2, sm: 4, md: 8 }}>
-        <Grid item xs={12} md={4}>
-          <Typography variant="h6">Address</Typography>
-          <Typography variant="body2">
-            5116 Dietrich Mill, North Emmet <br />
-            Dakota USA 45862
-          </Typography>
-          <Box mt={2}>
-            <IconButton color="inherit">
-              <Facebook />
-            </IconButton>
-            <IconButton color="inherit">
-              <Twitter />
-            </IconButton>
-            <IconButton color="inherit">
-              <YouTube />
-            </IconButton>
-            <IconButton color="inherit">
-              <Instagram />
-            </IconButton>
-          </Box>
-        </Grid>
-
-        <Grid item xs={12} md={4}>
-          <Typography variant="h6">Contact</Typography>
-          <Typography variant="body2">
-            P: +1 (234) 567 890 <br />
-            +0 (987) 654 321
-          </Typography>
-          <Typography variant="body2">
-            E: fashia@mails.com <br />
-            example@mail.com
-          </Typography>
-        </Grid>
-
-        <Grid item xs={12} md={4}>
-          <Typography variant="h6">Let's Talk About Fashion</Typography>
-          <Typography variant="body2">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Mauris sit amet cursus orci.
-          </Typography>
-          <Box mt={2}>
-            <Button variant="contained" sx={{ bgcolor: "white", color: "black" }}>
-              APPOINTMENT
-            </Button>
-          </Box>
-        </Grid>
-      </Grid>
-
-      <Box sx={{ borderBottom: "1px solid gray", my: 3, mx: 3 }} />
-      <Box textAlign="center" px={3}>
-        <Typography variant="body2">
-          COPYRIGHT © 2023 ASK PROJECT
-        </Typography>
-        <Box mt={1} display="flex" justifyContent="center" gap={2}>
-          <Typography variant="body2" component="a" href="#" sx={{ textDecoration: "none", color: "white" }}>
-            PRIVACY POLICY
-          </Typography>
-          <Typography variant="body2" component="a" href="#" sx={{ textDecoration: "none", color: "white" }}>
-            TERMS & SERVICES
-          </Typography>
-        </Box>
-      </Box>
-    
     </Box>
     </Container>
   );

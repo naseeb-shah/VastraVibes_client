@@ -16,6 +16,7 @@ const featured = [
 ];
 
 const TailorGrid = () => {
+    
   return (
     
 
