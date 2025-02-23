@@ -73,24 +73,10 @@ import "./App.css";
 
 function App() {
   return (
+    <>
+    <ToastContainer />
     <Router>
-      <ToastContainer />
-      <AppBar position="static" style={{ background: "black" }}>
-        <Toolbar>
-          <IconButton edge="start" color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" style={{ flexGrow: 1 }}>Vastra</Typography>
-          <Button color="inherit" href="/">Home</Button>
-          <Button color="inherit" href="/about">About</Button>
-          <Button color="inherit" href="/services">Services</Button>
-          <Button color="inherit" href="/contact">Contact</Button>
-          <Button color="inherit" href="/signup">Signup</Button>
-          <Button color="inherit" href="/login">Login</Button>
-        </Toolbar>
-      </AppBar>
-      <Container>
-        <Box mt={2}>
+     
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
@@ -100,10 +86,10 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
-        </Box>
-      </Container>
+     
       <Footer /> 
     </Router>
+    </>
   );
 }
 
