@@ -1,11 +1,11 @@
+
 import React from "react";
-import { Container, Typography, Box, Grid, Card, CardContent } from "@mui/material";
+import { Container, Typography, Box, Grid, Card, CardContent,Button } from "@mui/material";
 import PeopleIcon from "@mui/icons-material/People";
 import DesignServicesIcon from "@mui/icons-material/DesignServices";
 import AutoAwesomeIcon from "@mui/icons-material/AutoAwesome";
 import { styled } from "@mui/system";
 
-// Image Hover Animation - Zoom Effect
 const AnimatedImage = styled("img")({
   width: "260px",
   height: "200px",
@@ -74,8 +74,7 @@ const About = () => {
         </Grid>
       </Box>
     </Container>
-  );
-};
+)};
 
 const features = [
   {
